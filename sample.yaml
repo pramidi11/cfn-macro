@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  Ec2Instance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-0ef66fb3631e10714
+      SubnetId:
+        Fn::Transform:
+          - Name: GetSubnet
+            Parameters:
+              vpcId: vpc-0c89052d240c8a714
+Outputs:
+  ami-Id:
+    Value: Ec2Instance.Id
