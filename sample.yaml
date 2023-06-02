@@ -2,7 +2,7 @@ AWSTemplateFormatVersion: 2010-09-09
 Parameters:
   InstanceType:
     Type: String
-    Default: ''
+    Default: 'hpc6a.48xlarge'
 Resources:
   Ec2Instance:
     Type: 'AWS::EC2::Instance'
